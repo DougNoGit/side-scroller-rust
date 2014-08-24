@@ -5,7 +5,7 @@ extern crate opengl_graphics;
 
 use sdl2_game_window::GameWindowSDL2;
 use opengl_graphics::Gl;
-use std::io::timer;
+//use std::io::timer;
 
 use piston::
 {
@@ -24,7 +24,7 @@ use graphics::
     AddRectangle,
     AddColor,
     Draw,
-    RelativeTransform2d
+//    RelativeTransform2d
 };
 
 pub struct App
@@ -69,31 +69,32 @@ impl Game for App
         let drawSquare = | x : f64, y : f64, l : f64, h : f64 | 
         {
             // bounds are (left, right, top, bottom) of the sprites
-            let bounds = ( x, x + l, y, y - (h / 2.0) );
+            let bounds = ( x, x + l, y, y + h );
             let mut contacted : bool = false;
             
             unsafe
             {
-                if bounds.val1() == (playerx - (playerl / 2.0)) 
-                {
-                    if bounds.val2() > (playery - (playerh / 2.0))
+                    if bounds.val1() == playerx 
                     {
-                        if bounds.val3() < (playery + (playerh / 2.0))
+                        if bounds.val3() > playery
                         {
-                            println!("contact left");
-                            contacted = true;
-                            context
-                                .rect(0.0, 0.0, 600.0, 600.0)
-                                .rgba(1.0, 0.0, 0.0, 1.0)
-                                .draw(&mut self.gl);
+                            if bounds.val2() < (playery + playerh)
+                            {
+                                println!("contact left");
+                                contacted = true;
+                                context
+                                    .rect(0.0, 0.0, 600.0, 600.0)
+                                    .rgba(1.0, 0.0, 0.0, 1.0)
+                                    .draw(&mut self.gl);
+                            }
                         }
                     }
-                }
-                if bounds.val0() == (playerx + (playerl / 2.0)) 
+
+                if bounds.val0() == (playerx + playerl) 
                 {
-                    if bounds.val2() > (playery - (playerh / 2.0))
+                    if bounds.val2() < (playery + playerh)
                     {
-                        if bounds.val3() < (playery + (playerh / 2.0))
+                        if bounds.val3() > playery
                         {
                             println!("contact right");
                             contacted = true;
@@ -105,6 +106,7 @@ impl Game for App
                     }
                 }
             }
+
             if !contacted
             {
             context
@@ -125,6 +127,7 @@ impl Game for App
         }
     }
 
+    #[allow(unused_variable)]
     fn update(&mut self, args: &UpdateArgs)
     {
         unsafe
