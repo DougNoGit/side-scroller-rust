@@ -1,0 +1,79 @@
+[root]
+name = "side-scroller-rust"
+version = "0.0.0"
+dependencies = [
+ "graphics 0.0.0 (git+https://github.com/PistonDevelopers/rust-graphics.git#312181d16b6baa193bead397816cabd7730697f2)",
+ "opengl_graphics 0.0.0 (git+https://github.com/PistonDevelopers/opengl_graphics.git#5aeffac497c07c508c12c7781fa3703ee023a6b5)",
+ "piston 0.0.0 (git+https://github.com/PistonDevelopers/piston.git#8a4c90f4a7ddd28f30326036627bdd0a60b66f21)",
+ "sdl2_game_window 0.0.0 (git+https://github.com/PistonDevelopers/sdl2_game_window.git#873488c5291c8e3c66d3280ec7eb69546aa5e8d3)",
+]
+
+[[package]]
+name = "gl"
+version = "0.0.1"
+source = "git+https://github.com/bjz/gl-rs#ceb33c15715a71bc87cceed9a100f89ece061a7e"
+dependencies = [
+ "gl_generator 0.0.1 (git+https://github.com/bjz/gl-rs#ceb33c15715a71bc87cceed9a100f89ece061a7e)",
+]
+
+[[package]]
+name = "gl_generator"
+version = "0.0.1"
+source = "git+https://github.com/bjz/gl-rs#ceb33c15715a71bc87cceed9a100f89ece061a7e"
+dependencies = [
+ "sax-rs 0.0.1 (git+https://github.com/bjz/sax-rs#32365363802b8590a1b9e970e1128044b6db74d9)",
+]
+
+[[package]]
+name = "graphics"
+version = "0.0.0"
+source = "git+https://github.com/PistonDevelopers/rust-graphics.git#312181d16b6baa193bead397816cabd7730697f2"
+dependencies = [
+ "vecmath 0.0.0 (git+https://github.com/PistonDevelopers/vecmath#7c7e8c90212b134e3439499a6e82225043ddba06)",
+]
+
+[[package]]
+name = "image"
+version = "0.0.0"
+source = "git+https://github.com/PistonDevelopers/rust-image#2482f349bb1ba5942569329057c59857fccf0591"
+
+[[package]]
+name = "opengl_graphics"
+version = "0.0.0"
+source = "git+https://github.com/PistonDevelopers/opengl_graphics.git#5aeffac497c07c508c12c7781fa3703ee023a6b5"
+dependencies = [
+ "gl 0.0.1 (git+https://github.com/bjz/gl-rs#ceb33c15715a71bc87cceed9a100f89ece061a7e)",
+ "graphics 0.0.0 (git+https://github.com/PistonDevelopers/rust-graphics.git#312181d16b6baa193bead397816cabd7730697f2)",
+ "image 0.0.0 (git+https://github.com/PistonDevelopers/rust-image#2482f349bb1ba5942569329057c59857fccf0591)",
+]
+
+[[package]]
+name = "piston"
+version = "0.0.0"
+source = "git+https://github.com/PistonDevelopers/piston.git#8a4c90f4a7ddd28f30326036627bdd0a60b66f21"
+
+[[package]]
+name = "sax-rs"
+version = "0.0.1"
+source = "git+https://github.com/bjz/sax-rs#32365363802b8590a1b9e970e1128044b6db74d9"
+
+[[package]]
+name = "sdl2"
+version = "0.0.1"
+source = "git+https://github.com/AngryLawyer/rust-sdl2#feddc845ecd36c6dbdc088b7ceccf285dc9b452e"
+
+[[package]]
+name = "sdl2_game_window"
+version = "0.0.0"
+source = "git+https://github.com/PistonDevelopers/sdl2_game_window.git#873488c5291c8e3c66d3280ec7eb69546aa5e8d3"
+dependencies = [
+ "gl 0.0.1 (git+https://github.com/bjz/gl-rs#ceb33c15715a71bc87cceed9a100f89ece061a7e)",
+ "piston 0.0.0 (git+https://github.com/PistonDevelopers/piston.git#8a4c90f4a7ddd28f30326036627bdd0a60b66f21)",
+ "sdl2 0.0.1 (git+https://github.com/AngryLawyer/rust-sdl2#feddc845ecd36c6dbdc088b7ceccf285dc9b452e)",
+]
+
+[[package]]
+name = "vecmath"
+version = "0.0.0"
+source = "git+https://github.com/PistonDevelopers/vecmath#7c7e8c90212b134e3439499a6e82225043ddba06"
+

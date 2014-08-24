@@ -1,0 +1,2 @@
+/home/doug/Dropbox/doug/braveNewWorld/programming/learningRust/side-scroller/target/deps/libgraphics-de95cb034afca5b0.rlib: src/lib.rs src/add.rs src/back_end.rs src/context.rs src/draw.rs src/image_size.rs src/relative.rs src/view.rs src/internal.rs src/interpolation.rs src/modular_index.rs src/triangulation.rs src/vecmath.rs src/shape.rs
+
