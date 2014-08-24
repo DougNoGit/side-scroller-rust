@@ -152,7 +152,7 @@ impl Game for App
             }
 
             playery += playerv; // move the player in the direction of the player's velocity
-            playerv += 0.1; // accelerate the player towards the ground 
+            playerv += 0.2; // accelerate the player towards the ground 
         }
     }
 }
